@@ -108,3 +108,6 @@ def corroborate(body):
 def corroborate_endpoint():
     body = request.get_json(silent=True)
     return jsonify(corroborate(body))
+
+if __name__ == "__main__":
+    app.run(debug=True)
