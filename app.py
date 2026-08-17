@@ -108,8 +108,3 @@ def corroborate(body):
 def corroborate_endpoint():
     body = request.get_json(silent=True)
     return jsonify(corroborate(body))
-
-
-if __name__ == "__main__":
-    import os
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
